@@ -40,6 +40,7 @@ namespace DataAccess.Concrete.EntityFramework
 
         public Product Get(Expression<Func<Product, bool>> filter)
         {
+            // öğenin özelliklerini getirmek için kullanılır. Örneğin bankada hesaplarım sekmesi var, oradan bir hesaba tıklayıp özelliklerini getirmek için kullanırız.
             using (NortwindContext context = new NortwindContext())
             {
                 return context.Set<Product>().SingleOrDefault(filter);
@@ -49,6 +50,7 @@ namespace DataAccess.Concrete.EntityFramework
         public List<Product> GetAll(Expression<Func<Product, bool>> filter = null)
         {
             // null ise ? durumunu -- null değil filtre varsa : olan durumu getir. (binevi select*from products yada select*from products where gibi düşünülebilir)
+            // filtre null ise hepsini getir ve listele, null değil ise (filtre varsa) filtreye göre getir ve listele.
             using (NortwindContext context = new NortwindContext())
             {
                 return filter == null 
