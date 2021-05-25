@@ -19,6 +19,7 @@ namespace DataAccess.Concrete.EntityFramework
             // context.Entry(entity) --> dbye git [context aracı ile] verdiğim nesne ile eşlerştir [ yeni ürün ekliyeceğim için Add işleminde eşleştirme olmaz]
             //addedEntity.State ise bu nesneye ne yapılacağını yazarız. = EntityState.Added --> veriyi dbye ekle demek
             //context.SaveChanges --> işlemleri dbye kaydet
+            //using mantığı kullanınca at demek -- dispose
 
             using (NortwindContext context = new NortwindContext())
             {
