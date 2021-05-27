@@ -1,10 +1,10 @@
-﻿using Entities.Abstract;
+﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace DataAccess.Abstract
+namespace Core.DataAccess
 {
     //Expressionlu idafede linq ile yapıcağımız sorgularda kategoriye göre getir fiyata göre getir gibi filtreleme kodlarını tekrar tekrar yazmamamız için oluşturulmuş denklem
     //T Get ifadesi ise örneğin hesaplarım listesinden bir hesabı seçip detaylı bilgi görebileceğimiz ekranı sağlar (seçtiğimiz nesne hakkında bilgilerin gelmesi gibi)
